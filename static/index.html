@@ -4,21 +4,37 @@
 <head>
 	<meta charset="utf-8">
 	<title>HCI Project Portfolio</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="portfolio_01.css"/>
+	<link  href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<script>
+		$(function () { $("#folders").tabs();
+	</script>
+	
 </head>
 
-<body>
-	<!-- NAVBAR -->
-	<div id="header">
-		<div id="navbar">
-			<a href="http://yahoo.com" id="nav1" class="navtabs">one</a>
-			<a href="http://google.com" id="nav2" class="navtabs">two</a>
-			<a href="http://aol.com" id="nav3" class="navtabs">three</a>
+<body> 
+	<div id="tabs"><!-- NAVBAR -->
+		<div id="header">
+			<div id="navbar">
+				<ul class="linktabs">
+					<li class="active"><a href="#about" class="navtabs nav1">about</a></li>
+					<li><a href="#projects" class="navtabs nav2">projects</a></li>
+					<li><a href="#contact" class="navtabs nav3">contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="content">
+			<div id="about" class="contabs">?????</div>
+
+			<div id="projects" class="contabs">?????uh</div>
+
+			<div id="contact" class="contabs">??uh???</div>
 		</div>
 	</div>
 
-	<h1>me</h1>
 	<!-- <h1>Michelle Nguyen</h1>
 	<h4>Project Portfolio</h4>
 
