@@ -7,48 +7,92 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	
+	<script>
+	$( document ).ready(function() {
+		$(document).ready(function(){
+			$('a[href^="#"]').on('click',function (e) {
+				e.preventDefault();
+
+				var target = this.hash;
+				var $target = $(target);
+
+				$('html, body').stop().animate({
+					'scrollTop': $target.offset().top
+				}, 900, 'swing', function () {
+				});
+			});
+		});
+	});
+	</script>
+
 </head>
 
 <body>
 
-	<h1>Michelle Nguyen</h1>
-	<h5>Third-year undergraduate student at UC San Diego, pursuing a degree in Computer Science. Contact at mqn008@ucsd.edu.</h5>
-
-	<h1>projects</h1>
-	<div id="proj">
-
-		<div class="proj-item" style="background-image: url(proj01.png);">
-			<div class="proj-desc"><div class="proj-desc-in">
-				<a href="project-01.html">Project 01</a>
-				<h2>Project 01 Description Here.</h2>
-			</div></div>
-		</div>
-
-		<div class="proj-item" style="background-image: url(proj02.png);">
-			<div class="proj-desc"><div class="proj-desc-in">
-				<a href="project-02.html">Project 02</a>
-				<h2>Project 02 Description Here.</h2>
-			</div></div>
-		</div>
-
-		<div class="proj-item" style="background-image: url(proj03.png);">
-			<div class="proj-desc"><div class="proj-desc-in">
-				<a href="project-03.html">Project 03</a>
-				<h2>Project 03 Description Here.</h2>
-			</div></div>
-		</div>
-
-		<div class="proj-item" style="background-image: url(proj04.png);">
-			<div class="proj-desc"><div class="proj-desc-in">
-				<a href="project-04.html">Project 04</a>
-				<h2>Project 04 Description Here.</h2>
-			</div></div>
-		</div>
-
+	<div id="header">
+		<ul id="navbar">
+			<li><a href="#about">About</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
 	</div>
 
-	<div id="foot">&nbsp;</div>
+	<div id="about">
+		<div id="abt">
+			<h1>Michelle Nguyen</h1>
+			<h5>Third-year undergraduate student at UC San Diego, pursuing a degree in Computer Science.</h5>
+		</div>
+	</div>
 
+	<div id="projects">
+		<div id="proj">
+
+			<h1>projects</h1>
+			<div id="proj-in">
+				<div class="proj-item" style="background-image: url(proj01.png);">
+					<div class="proj-desc"><div class="proj-desc-in">
+						<a href="project-01.html">Project 01</a>
+						<h2>Project 01 Description Here.</h2>
+					</div></div>
+				</div>
+
+				<div class="proj-item" style="background-image: url(proj02.png);">
+					<div class="proj-desc"><div class="proj-desc-in">
+						<a href="project-02.html">Project 02</a>
+						<h2>Project 02 Description Here.</h2>
+					</div></div>
+				</div>
+
+				<div class="proj-item" style="background-image: url(proj03.png);">
+					<div class="proj-desc"><div class="proj-desc-in">
+						<a href="project-03.html">Project 03</a>
+						<h2>Project 03 Description Here.</h2>
+					</div></div>
+				</div>
+
+				<div class="proj-item" style="background-image: url(proj04.png);">
+					<div class="proj-desc"><div class="proj-desc-in">
+						<a href="project-04.html">Project 04</a>
+						<h2>Project 04 Description Here.</h2>
+					</div></div>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both">&nbsp;</div>
+	</div>
+
+	<div id="contact">
+		<div id="cont">
+			<h1>Contact</h1>
+			<h5>email: mqn008@gmail.com</h5>
+		</div>
+	</div>
+
+
+	<div id="footer">&nbsp;</div>
 	<!-- 
 	<h1>Scott Klemmer</h1> 
 	<h4>Project Portfolio</h4>
